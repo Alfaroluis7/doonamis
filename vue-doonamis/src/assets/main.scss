@@ -1,0 +1,256 @@
+@import './base.css';
+@import "./variables.scss";
+@import "./grid.scss";
+@import "./modal.scss";
+@import "./alert.scss";
+
+#app {
+  font-weight: normal;
+  width: 100%;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+}
+
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  font-size: $font-size-base;
+  color: $dark;
+  background-color: #fff;
+}
+
+
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+
+  .login-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: $radius;
+    width: 100%;
+    max-width: 400px;
+
+    h2 {
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      text-align: center;
+      color: $text;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        color: $text;
+      }
+
+      input {
+        width: 100%;
+        padding: 0.5rem 0.75rem;
+        font-size: 1rem;
+        border: 1px solid $input-border;
+        border-radius: $radius;
+
+        &:focus {
+          border-color: $primary;
+          outline: none;
+        }
+      }
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 0.5rem;
+      background-color: $primary;
+      color: white;
+      border: none;
+      border-radius: $radius;
+      cursor: pointer;
+
+    }
+
+    .error-message {
+      margin-top: 1rem;
+      color: $danger;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  border-radius: $border-radius;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  background-color: $primary;
+  color: white;
+
+
+
+  &--secondary {
+    background-color: $secondary;
+  }
+
+  &--danger {
+    background-color: $danger;
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: $dark;
+
+  th,
+  td {
+    padding: 0.75rem;
+    border: 1px solid $border-color;
+  }
+
+  th {
+    background-color: $light;
+    text-align: left;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+}
+
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background-color: $light;
+  padding: 1rem;
+  border-right: 1px solid $border-color;
+
+  .nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .nav-item {
+      margin-bottom: 0.5rem;
+
+      .nav-link {
+        color: $dark;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        display: block;
+        border-radius: $border-radius;
+
+        &.active {
+          background-color: $primary;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+
+.btn-danger {
+  background-color: #b85252;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+  justify-content: center;
+
+  li {
+    margin: 0 0.25rem;
+
+
+
+
+
+    a {
+      min-width: 36px;
+      padding: 0.375rem 0.75rem;
+      border: 1px solid $border;
+      background-color: white;
+      color: $text;
+      border-radius: $radius;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $light;
+      }
+
+          &.active {
+      background-color: $primary;
+      color: white;
+      border-color: $primary;
+    }
+
+    &.disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+      background-color: #eee;
+    }
+
+
+
+
+    }
+  }
+}
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $navbar-bg;
+  padding: $navbar-padding;
+  color: $navbar-text;
+
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: $navbar-text;
+    text-decoration: none;
+
+    &:hover {
+      color: $navbar-hover;
+    }
+  }
+}

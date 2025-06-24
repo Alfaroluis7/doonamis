@@ -1,0 +1,31 @@
+$info-bg: #e7f3fe;
+$info-text: #084298;
+$info-border: #b6d4fe;
+
+$danger-bg: #f8d7da;
+$danger-text: #842029;
+$danger-border: #f5c2c7;
+
+$radius: 0.375rem;
+$padding: 0.75rem 1rem;
+$font-size: 1rem;
+
+.alert {
+  padding: $padding;
+  border-radius: $radius;
+  font-size: $font-size;
+  border: 1px solid transparent;
+  margin-bottom: 1rem;
+}
+
+.alert-success {
+  background-color: $info-bg;
+  color: $info-text;
+  border-color: $info-border;
+}
+
+.alert-danger {
+  background-color: $danger-bg;
+  color: $danger-text;
+  border-color: $danger-border;
+}
